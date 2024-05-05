@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp/pages/calls.dart';
-import 'package:whatsapp/pages/chats.dart';
-import 'package:whatsapp/pages/status.dart';
+import 'package:whatsapp/pages/mobile/calls.dart';
+import 'package:whatsapp/pages/mobile/chats.dart';
+import 'package:whatsapp/pages/mobile/status.dart';
 import 'package:whatsapp/utils/custom_icon_button.dart';
 
 class MobileScreenLayout extends StatefulWidget {
@@ -58,8 +58,8 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout>
           ],
         ),
       ),
-      body: const TabBarView(
-        // controller: _tabController,
+      body: TabBarView(
+        controller: _tabController,
         children: [
           Chats(),
           Status(),

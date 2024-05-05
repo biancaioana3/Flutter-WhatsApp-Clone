@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       title: 'WhatsApp Me',
       theme: lightTheme(),
       darkTheme: darkTheme(),
-      home: ResponsiveLayout(
+      home: const ResponsiveLayout(
         mobileScreenLayout: MobileScreenLayout(),
         webScreenLayout: WebScreenLayout(),
       ),
