@@ -10,7 +10,7 @@ class StartPage extends StatelessWidget {
       body: Expanded(
         flex: 7,
         child: Container(
-          color: context.theme.chatPageDoodleColor,
+          color: context.theme.appBarWebColor,
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

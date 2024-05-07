@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp/Model/ChatModel.dart';
 import 'package:whatsapp/extension/custom_theme_extension.dart';
-import 'package:whatsapp/pages/mobile/chat_text_filed.dart';
+import 'package:whatsapp/pages/web/chat_text_filed.dart';
 import 'package:whatsapp/pages/mobile/own_messages_card.dart';
 
 class IndividualPage extends StatefulWidget {
@@ -88,7 +88,7 @@ class _IndividualPageState extends State<IndividualPage> {
                     widget.chatModel.messages.add(message);
                   });
                 },
-              ),
+              )
             ],
           ),
         ],

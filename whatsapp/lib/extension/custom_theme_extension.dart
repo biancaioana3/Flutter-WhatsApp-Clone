@@ -24,8 +24,19 @@ class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
   final Color? receiverChatCardBg;
   final Color? yellowCardBgColor;
   final Color? yellowCardTextColor;
+  final Color? backgroundWebColor;
+  final Color? appBarWebColor;
+  final Color? chatWebColor;
+  final Color? iconWebColor;
+  final Color? textMessageWebColor;
+  final Color? topBorderWebColor;
 
   const CustomThemeExtension({
+    this.backgroundWebColor,
+    this.appBarWebColor,
+    this.chatWebColor,
+    this.iconWebColor,
+    this.textMessageWebColor,
     this.circleImageColor,
     this.greyColor,
     this.blueColor,
@@ -42,6 +53,7 @@ class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
     this.receiverChatCardBg,
     this.yellowCardBgColor,
     this.yellowCardTextColor,
+    this.topBorderWebColor,
   });
 
   static const lightMode = CustomThemeExtension(
@@ -61,6 +73,12 @@ class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
     receiverChatCardBg: Color(0xFFFFFFFF),
     yellowCardBgColor: Color(0xFFFFEECC),
     yellowCardTextColor: Color(0xFF13191C),
+    backgroundWebColor: Color(0xFFe4e2dd),
+    appBarWebColor: Color(0xFFf1f2f5),
+    chatWebColor: Color(0xFFFFFFFF),
+    iconWebColor: Color(0xFFdfe5e7),
+    textMessageWebColor: Color(0xFFFFFFFF),
+    topBorderWebColor: Color(0xFF04a784),
   );
 
   static const darkMode = CustomThemeExtension(
@@ -80,6 +98,12 @@ class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
     receiverChatCardBg: Coloors.greyBackground,
     yellowCardBgColor: Color(0xFF222E35),
     yellowCardTextColor: Color(0xFFFFD279),
+    backgroundWebColor: Color(0xFF0c1316),
+    appBarWebColor: Color(0xFF202c33),
+    chatWebColor: Color(0xFF111b21),
+    iconWebColor: Color(0xFF0c1316),
+    textMessageWebColor: Color(0xFF2a3942),
+    topBorderWebColor: Color(0xFF0c1316),
   );
 
   @override
@@ -100,6 +124,12 @@ class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
     Color? receiverChatCardBg,
     Color? yellowCardBgColor,
     Color? yellowCardTextColor,
+    Color? backgroundWebColor,
+    Color? appBarWebColor,
+    Color? chatWebColor,
+    Color? iconWebColor,
+    Color? textMessageWebColor,
+    Color? topBorderWebColor,
   }) {
     return CustomThemeExtension(
       circleImageColor: circleImageColor ?? this.circleImageColor,
@@ -118,6 +148,12 @@ class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
       receiverChatCardBg: receiverChatCardBg ?? this.receiverChatCardBg,
       yellowCardBgColor: yellowCardBgColor ?? this.yellowCardBgColor,
       yellowCardTextColor: yellowCardTextColor ?? this.yellowCardTextColor,
+      backgroundWebColor: backgroundWebColor ?? this.backgroundWebColor,
+      appBarWebColor: appBarWebColor ?? this.appBarWebColor,
+      chatWebColor: chatWebColor ?? this.chatWebColor,
+      iconWebColor: iconWebColor ?? this.iconWebColor,
+      textMessageWebColor: textMessageWebColor ?? this.textMessageWebColor,
+      topBorderWebColor: topBorderWebColor ?? this.topBorderWebColor,
     );
   }
 
@@ -148,6 +184,15 @@ class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
           Color.lerp(receiverChatCardBg, other.receiverChatCardBg, t),
       chatPageDoodleColor:
           Color.lerp(chatPageDoodleColor, other.chatPageDoodleColor, t),
+      backgroundWebColor:
+          Color.lerp(backgroundWebColor, other.backgroundWebColor, t),
+      appBarWebColor: Color.lerp(appBarWebColor, other.appBarWebColor, t),
+      chatWebColor: Color.lerp(chatWebColor, other.chatWebColor, t),
+      iconWebColor: Color.lerp(iconWebColor, other.iconWebColor, t),
+      textMessageWebColor:
+          Color.lerp(textMessageWebColor, other.textMessageWebColor, t),
+      topBorderWebColor:
+          Color.lerp(topBorderWebColor, other.topBorderWebColor, t),
     );
   }
 }

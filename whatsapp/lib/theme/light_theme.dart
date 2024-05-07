@@ -4,14 +4,19 @@ import 'package:whatsapp/utils/coloors.dart';
 
 import '../extension/custom_theme_extension.dart';
 
-ThemeData lightTheme() {
+ThemeData lightTheme(BuildContext context) {
   final ThemeData base = ThemeData.light();
+  final bool isMobile = MediaQuery.of(context).size.width < 600;
+  Color? appBarColor = isMobile ? Coloors.greenLight : Color(0xFFf1f2f5);
+  Color? scaffolColor = isMobile ? Coloors.backgroundLight : Color(0xFFd2d8dc);
+  Color? iconColor = isMobile ? Color(0xFFFFFFFF) : Coloors.greyLight;
+
   return base.copyWith(
-    backgroundColor: Coloors.backgroundLight,
+    backgroundColor: scaffolColor,
     scaffoldBackgroundColor: Coloors.backgroundLight,
     extensions: [CustomThemeExtension.lightMode],
-    appBarTheme: const AppBarTheme(
-      backgroundColor: Coloors.greenLight,
+    appBarTheme: AppBarTheme(
+      backgroundColor: appBarColor,
       titleTextStyle: TextStyle(
         fontSize: 18,
         fontWeight: FontWeight.w600,
@@ -21,7 +26,7 @@ ThemeData lightTheme() {
         statusBarIconBrightness: Brightness.dark,
       ),
       iconTheme: IconThemeData(
-        color: Colors.white,
+        color: iconColor,
       ),
     ),
     tabBarTheme: const TabBarTheme(

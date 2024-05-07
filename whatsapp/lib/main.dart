@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'WhatsApp Me',
-      theme: lightTheme(),
+      theme: lightTheme(context),
       darkTheme: darkTheme(),
       home: const ResponsiveLayout(
         mobileScreenLayout: MobileScreenLayout(),
