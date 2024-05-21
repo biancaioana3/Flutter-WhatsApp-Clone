@@ -3,6 +3,7 @@ import 'package:whatsapp/Model/ChatModel.dart';
 import 'package:whatsapp/extension/custom_theme_extension.dart';
 import 'package:whatsapp/pages/mobile/chat_text_filed.dart';
 import 'package:whatsapp/pages/mobile/own_messages_card.dart';
+import 'package:whatsapp/pages/mobile/replay_card.dart';
 
 class IndividualPage extends StatefulWidget {
   IndividualPage({Key? key, required this.chatModel}) : super(key: key);
@@ -86,7 +87,12 @@ class _IndividualPageState extends State<IndividualPage> {
                 child: ListView(
                   shrinkWrap: true,
                   children: _messages.map((message) {
-                    return OwnMessagesCard(message: message);
+                    return Column(
+                      children: <Widget>[
+                        OwnMessagesCard(message: message),
+                        const ReplayCard(),
+                      ],
+                    );
                   }).toList(),
                 ),
               ),

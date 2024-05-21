@@ -36,7 +36,7 @@ class ReplayCard extends StatelessWidget {
                   bottom: 20,
                 ),
                 child: Text(
-                  "Hey jhfdjgfdsj jhsfdjhs kgkhdfgsh",
+                  "Hello!",
                   style: TextStyle(
                     fontSize: 16,
                     color: context.theme.greyColor,
